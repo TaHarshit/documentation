@@ -103,6 +103,13 @@
     },
     "playground": {
       "display": "interactive"
+    },
+    "mdx": {
+      "server": "https://fssportal.com/sandbox",
+      "auth": {
+        "method": "key",
+        "name": "X-API-Token"
+      }
     }
   }
 }
