@@ -1,0 +1,138 @@
+---
+title: Single Window Measurement
+api: 'POST /api/v1/measurements/single_window_add_edit'
+description: Add/edit single window measurement
+---
+
+# Single Window Measurement
+
+Add or update a single window measurement.
+
+## Endpoint
+
+```
+POST /api/v1/measurements/single_window_add_edit
+```
+
+<Note>This endpoint requires authentication</Note>
+
+
+
+## Headers
+
+<ParamField header="X-API-Token" type="string" required>
+  Your API access token. You can also set this globally in the API playground.
+</ParamField>
+
+<ParamField header="platform" type="string" required>
+  The platform making the request: `WEB`, `IOS`, or `ANDROID`.
+</ParamField>
+
+<ParamField header="Authorization" type="string" required placeholder="Bearer {token}">
+  User authentication token (Bearer token received after signin).
+</ParamField>
+## Request Body
+
+<ParamField body="client_id" type="integer" required>
+  Client ID
+</ParamField>
+
+<ParamField body="room_id" type="integer" required>
+  Room ID
+</ParamField>
+
+<ParamField body="window_type" type="string">
+  Window type
+</ParamField>
+
+<ParamField body="width" type="integer">
+  Window width
+</ParamField>
+
+<ParamField body="height" type="integer">
+  Window height
+</ParamField>
+
+<ParamField body="depth" type="integer">
+  Window depth
+</ParamField>
+
+<ParamField body="notes" type="string">
+  Additional notes
+</ParamField>
+
+## Response
+
+<ResponseField name="status" type="string">
+  Success status
+</ResponseField>
+
+<ResponseField name="data" type="object">
+  Response data
+</ResponseField>
+
+<RequestExample>
+
+```bash cURL
+curl -X POST http://localhost/fss/public/api/v1/measurements/single_window_add_edit \
+  -H "X-API-Token: YOUR_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "client_id": 456,
+    "room_id": 123,
+    "window_type": "single",
+    "width": 36,
+    "height": 48,
+    "depth": 2,
+    "notes": "Living room window"
+  }'
+```
+
+```javascript JavaScript
+const response = await fetch('http://localhost/fss/public/api/v1/measurements/single_window_add_edit', {
+  method: 'POST',
+  headers: {
+    'X-API-Token': 'YOUR_API_TOKEN',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    client_id: 456,
+    room_id: 123,
+    window_type: 'single',
+    width: 36,
+    height: 48,
+    depth: 2,
+    notes: 'Living room window'
+  })
+});
+
+const data = await response.json();
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Success Response
+{
+  "status": "success",
+  "data": {
+    "id": 789,
+    "client_id": 456,
+    "room_id": 123,
+    "window_type": "single",
+    "width": 36,
+    "height": 48,
+    "created_at": "2024-01-15T10:30:00Z"
+  }
+}
+```
+
+```json Error Response
+{
+  "status": "error",
+  "message": "Validation failed"
+}
+```
+
+</ResponseExample>

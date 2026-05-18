@@ -1,0 +1,92 @@
+---
+title: Get Fields Order
+api: 'POST /api/v1/user/get_fields_order'
+description: Get custom fields order
+---
+
+# Get Fields Order
+
+Get the current order of custom fields in your account.
+
+## Endpoint
+
+```
+POST /api/v1/user/get_fields_order
+```
+
+<Note>This endpoint requires authentication</Note>
+
+
+
+## Headers
+
+<ParamField header="X-API-Token" type="string" required>
+  Your API access token. You can also set this globally in the API playground.
+</ParamField>
+
+<ParamField header="platform" type="string" required>
+  The platform making the request: `WEB`, `IOS`, or `ANDROID`.
+</ParamField>
+
+<ParamField header="Authorization" type="string" required placeholder="Bearer {token}">
+  User authentication token (Bearer token received after signin).
+</ParamField>
+## Request Body
+
+```json
+{}
+```
+
+## Response
+
+<ResponseField name="status" type="string">
+  Success status
+</ResponseField>
+
+<ResponseField name="data" type="object">
+  Response data
+</ResponseField>
+
+<RequestExample>
+
+```bash cURL
+curl -X POST http://localhost/fss/public/api/v1/user/get_fields_order \
+  -H "X-API-Token: YOUR_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{}'
+```
+
+```javascript JavaScript
+const response = await fetch('http://localhost/fss/public/api/v1/user/get_fields_order', {
+  method: 'POST',
+  headers: {
+    'X-API-Token': 'YOUR_API_TOKEN',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({})
+});
+
+const data = await response.json();
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Success Response
+{
+  "status": "success",
+  "data": {
+    "fields": ["field1", "field2", "field3"]
+  }
+}
+```
+
+```json Error Response
+{
+  "status": "error",
+  "message": "Unauthorized"
+}
+```
+
+</ResponseExample>

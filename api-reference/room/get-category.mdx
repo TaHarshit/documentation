@@ -1,0 +1,71 @@
+---
+title: Get Client Rooms Category
+api: 'POST /api/v1/room/get_category'
+description: Get room categories for a client
+---
+
+## Endpoint
+
+```
+POST /api/v1/room/get-category
+```
+
+<Note>This endpoint requires authentication</Note>
+
+
+
+## Headers
+
+<ParamField header="X-API-Token" type="string" required>
+  Your API access token. You can also set this globally in the API playground.
+</ParamField>
+
+<ParamField header="platform" type="string" required>
+  The platform making the request: `WEB`, `IOS`, or `ANDROID`.
+</ParamField>
+
+<ParamField header="Authorization" type="string" required placeholder="Bearer {token}">
+  User authentication token (Bearer token received after signin).
+</ParamField>
+## Request Body
+
+No request body required.
+
+## Response
+
+
+
+<RequestExample>
+
+```bash cURL
+curl --location 'http://fssportal.com/api/v1/room/get-category' \
+--header 'X-API-Token: YOUR_API_TOKEN' \
+--header 'Content-Type: application/json'
+```
+
+```javascript JavaScript
+const response = await fetch('http://fssportal.com/api/v1/room/get-category', {
+  method: 'POST',
+  headers: {
+    'X-API-Token': 'YOUR_API_TOKEN',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({})
+});
+
+const data = await response.json();
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Success Response
+null
+```
+
+</ResponseExample>
+
+## Notes
+
+- Authentication is required

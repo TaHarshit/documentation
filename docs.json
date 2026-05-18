@@ -1,91 +1,82 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "FSS API v1 Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0A8F5A",
+    "light": "#65C18C",
+    "dark": "#074A30"
   },
-  "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/components",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "Agent ready",
-            "pages": [
-              "agent-ready/prompt",
-              "agent-ready/visibility",
-              "agent-ready/contextual",
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "introduction"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API Reference",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "User Management",
             "pages": [
-              "api-reference/introduction"
+              "api-reference/user/get-profile",
+              "api-reference/user/get-company-user"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Client Management",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/client/add",
+              "api-reference/client/update",
+              "api-reference/client/delete",
+              "api-reference/client/search",
+              "api-reference/client/list",
+              "api-reference/client/user-client"
+            ]
+          },
+          {
+            "group": "Room Management",
+            "pages": [
+              "api-reference/room/measurement-type",
+              "api-reference/room/add",
+              "api-reference/room/update",
+              "api-reference/room/delete",
+              "api-reference/room/get-category",
+              "api-reference/room/get",
+              "api-reference/room/get-by-client-id",
+              "api-reference/adminroom/index"
+            ]
+          },
+          {
+            "group": "Measurements",
+            "pages": [
+              "api-reference/measurements/single-window-photo",
+              "api-reference/measurements/specialty-window",
+              "api-reference/measurements/series-window-draperies",
+              "api-reference/measurements/awning",
+              "api-reference/measurements/get",
+              "api-reference/measurements/delete"
+            ]
+          },
+          {
+            "group": "Lead Sources",
+            "pages": [
+              "api-reference/lead-source/get",
+              "api-reference/lead-source/add",
+              "api-reference/lead-source/update",
+              "api-reference/lead-source/user-leadsource"
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -94,33 +85,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Dashboard",
+        "href": "https://fssportal.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "label": "Get API Token",
+      "href": "https://fssportal.com/admin/api-tokens"
     }
   }
 }
