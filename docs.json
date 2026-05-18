@@ -94,5 +94,15 @@
       "label": "Get API Token",
       "href": "https://fssportal.com/admin/api-tokens"
     }
+  },
+  "api": {
+    "baseUrl": "https://fssportal.com/sandbox",
+    "auth": {
+      "method": "key",
+      "name": "X-API-Token"
+    },
+    "playground": {
+      "display": "interactive"
+    }
   }
 }
