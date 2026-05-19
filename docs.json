@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "FSS API v1 Documentation",
   "colors": {
-    "primary": "#0A8F5A",
-    "light": "#65C18C",
-    "dark": "#074A30"
+    "primary": "#e45f0d",
+    "light": "#e45f0d",
+    "dark": "#e45f0d"
   },
   "navigation": {
     "tabs": [
