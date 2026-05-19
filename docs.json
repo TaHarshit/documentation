@@ -82,6 +82,7 @@
     "light": "/logo/logo.png",
     "dark": "/logo/logo.png"
   },
+  "favicon": "/favicon.png",
   "navbar": {
     "links": [
       {
