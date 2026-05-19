@@ -6,12 +6,12 @@
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#e45f0d",
+    "light": "#e45f0d",
+    "dark": "#e45f0d",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#e45f0d",
+      "to": "#e45f0d"
     }
   },
   "topbarLinks": [
@@ -55,13 +55,6 @@
     },
     "playground": {
       "display": "interactive"
-    },
-    "mdx": {
-      "server": "https://fssportal.com/sandbox",
-      "auth": {
-        "method": "key",
-        "name": "X-API-Token"
-      }
     }
   },
   "navigation": [
