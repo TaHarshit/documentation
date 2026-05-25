@@ -68,7 +68,6 @@
           {
             "group": "Lead Sources",
             "pages": [
-              "api-reference/lead-source/get",
               "api-reference/lead-source/add",
               "api-reference/lead-source/update",
               "api-reference/lead-source/user-leadsource"
